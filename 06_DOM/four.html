@@ -31,6 +31,20 @@
     addOptiLanguage('Java');
 
     // Edit Element
+    const secondLang = document.querySelector("li:nth-child(2)");
+    console.log(secondLang);
+    // secondLang.innerHTML = "Mojo"; // Not an optimized way
+    const newLi = document.createElement('li')
+    newLi.textContent = "Mojo";
+    secondLang.replaceWith(newLi); // optimized way
+
+    // Edit Element -> Another Method
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = "<li>TypeScript</li>"; // not an optimized way
+
+    // remove Element
+    const lastlang = document.querySelector("li:last-child");
+    lastlang.remove(); 
 
 </script>
 </html>
