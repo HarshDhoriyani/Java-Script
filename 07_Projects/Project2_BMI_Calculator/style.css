@@ -1,6 +1,8 @@
+body {
+    background-color: #28b0ea;
+}
 .container {
     text-align: center;
-    background-color: #28b0ea;
     padding-left: 30px;
     height: 556px;
     width: 100%;
