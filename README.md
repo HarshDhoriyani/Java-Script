@@ -134,7 +134,3 @@ Please ensure your code is clean, well-documented, and follows best practices.
 
 ---
 
-## 📜 License
-
-This project and content are licensed under the [MIT License](LICENSE).
-
