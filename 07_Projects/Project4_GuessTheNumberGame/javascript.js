@@ -44,12 +44,22 @@ function checkGuess(guess) {
     if (guess === randomNum) {
         displayMessage('🎉 Congratulations! You got it right!');
         endGame();
-    } else if (guess < randomNum) {
+    } 
+    else if (guess < randomNum && (randomNum - guess) >= 20) {
         displayMessage('Your guess is too low!');
         lowOrHi.textContent = 'Last guess was too low!';
-    } else if (guess > randomNum) {
+    } 
+    else if (guess < randomNum && (randomNum - guess) < 20) {
+        displayMessage('Your guess is low!');
+        lowOrHi.textContent = 'Last guess was low!';
+    } 
+    else if (guess > randomNum && (guess - randomNum) >= 20) {
         displayMessage('Your guess is too high!');
         lowOrHi.textContent = 'Last guess was too high!';
+    }
+    else if (guess > randomNum && (guess - randomNum) < 20) {
+        displayMessage('Your guess is high!');
+        lowOrHi.textContent = 'Last guess was high!';
     }
     numGuess++;
     userInput.value = '';
