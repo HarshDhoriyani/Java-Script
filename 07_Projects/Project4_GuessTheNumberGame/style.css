@@ -1,0 +1,140 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #15dabf;
+}
+
+#wrapper {
+    min-height: calc(100vh - 60px); /* Leaves space for header (~60px) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #5694ae;
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    background-color: #1257c0;
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+form {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#guess {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+#guessField {
+    width: 80%;
+    height: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 3px solid #333;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+#submt {
+    background-color: #4149de;
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#submt:hover {
+    background-color: #e346b4;
+    transform: scale(1.05);
+}
+
+.resultParas {
+    margin-top: 1.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.lastResult {
+    color: rgb(135, 241, 4);
+    padding: 7px;
+    font-weight: bold;
+}
+
+.guesses {
+    color: rgb(240, 236, 2);
+    padding: 7px;
+    font-weight: bold;
+}
+
+.lowOrHi h2 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+#newGame {
+    background-color: #4149de;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#newGame:hover {
+    background-color: #e346b4;
+    transform: scale(1.05);
+}
+
+#newGame:active {
+    transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #wrapper {
+        padding: 1rem;
+        font-size: 1rem;
+        width: 95%;
+    }
+
+    #guessField {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
