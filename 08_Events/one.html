@@ -38,20 +38,40 @@
 
     // document.getElementById('owl').addEventListener('click', function(e){
     //     console.log("owl clicked ");
+    //     e.stopPropagation(); // this will stop event bubbling
     // }, false)
     
 
     // Event Capturing : Here if we click owl image firstly "clicked inside the ul" will be printed then "owl clicked" will be printed.
-    document.getElementById('images').addEventListener('click', function(e){
-        console.log("clicked inside the ul");
-    }, true)
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, true)
 
-    document.getElementById('owl').addEventListener('click', function(e){
-        console.log("owl clicked ");
-    }, true)
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked ");
+    // }, true)
     
     
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();  // Bubbling Stopped
+    //     console.log("google clicked");
+    // }, false)
     
+    // Write a function that when u click any image that image should be vanished from the page(we have remove complete li of that image).
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode;
+            removeIt.remove();  // Method 1
+
+        }
+        
+        // removeIt.parentNode.removeChild(removeIt);  // Method 2
+
+    }, false);
 
 </script>
 </html>
