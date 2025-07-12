@@ -1,0 +1,34 @@
+<!-- setTimeout() -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Projects</title>
+</head>
+<body>
+    <h1>Harsh Dhoriyani</h1>
+    <button id="Stop">Stop</button>
+</body>
+<script>
+    const sayHarsh = function(){
+        console.log("Harsh");
+    }
+
+    // setTimeout(sayHarsh, 2000)        // Time is in milisecond - 2000ms = 2 sec
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "JavaScript"
+    }
+
+    const changeMe = setTimeout(changeText, 2000)
+
+    document.querySelector('#Stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("Stopped");
+
+    })
+
+</script>
+</html>

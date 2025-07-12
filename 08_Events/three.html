@@ -1,0 +1,33 @@
+<!-- setInterval() -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Projects</title>
+</head>
+<body>
+    <h1>JavaScript From Harsh</h1>
+    <button id="Start">Start</button>
+    <button id="Stop">Stop</button>
+</body>
+<script>
+    const sayDate = function(str) {
+        console.log(str, Date.now());
+    }
+
+    document.querySelector('#Start').addEventListener('click', function(){
+        intervalID = setInterval(sayDate, 1000, "Harsh");
+    })
+
+    document.querySelector('#Stop').addEventListener('click', function(){
+        clearInterval(intervalID)
+        console.log("Stopped");
+    })
+
+    // const intervalID = setInterval(sayDate, 1000, "Harsh")
+
+    // clearInterval(intervalID)
+</script>
+</html>
