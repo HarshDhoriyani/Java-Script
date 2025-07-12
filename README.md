@@ -106,6 +106,7 @@ Below is the list of JavaScript concepts and topics I'm learning, categorized fo
 - BMI Calculator
 - Digital Clock
 - Guess the Number Game
+- Unlimited Colors
 
 
 ---
