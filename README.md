@@ -107,6 +107,7 @@ Below is the list of JavaScript concepts and topics I'm learning, categorized fo
 - Digital Clock
 - Guess the Number Game
 - Unlimited Colors
+- Keyboard Magic
 
 
 ---
